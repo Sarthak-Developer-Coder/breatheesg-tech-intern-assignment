@@ -40,6 +40,34 @@ Notes:
 - The UI also lets you override API base URL / tenant / actor from the header (stored in localStorage).
 - Backend automatically adds `RENDER_EXTERNAL_HOSTNAME` to Django `ALLOWED_HOSTS`.
 
+### Vercel + Render (common split)
+
+Vercel is a good fit for the React frontend. For the Django + Postgres backend, use Render.
+
+1) Deploy backend on Render
+
+1. Create a Postgres database in Render.
+2. Create a Render Web Service from this repo:
+  - Runtime: Docker
+  - Root directory / context: `backend`
+  - Dockerfile: `backend/Dockerfile`
+  - Docker Command:
+    `sh -c "set -e; python manage.py migrate --noinput; python manage.py seed_demo; python manage.py collectstatic --noinput; gunicorn config.wsgi:application --bind 0.0.0.0:${PORT:-8000} --workers 2"`
+3. Set backend env vars:
+  - `DATABASE_URL` = Render Postgres connection string
+  - `DJANGO_DEBUG` = `false`
+  - `DJANGO_SECRET_KEY` = random
+  - `CORS_ALLOWED_ORIGINS` = your Vercel frontend URL (comma-separated if multiple)
+
+2) Deploy frontend on Vercel
+
+1. In Vercel: **Add New → Project → Import** this GitHub repo.
+2. Set **Root Directory** to `frontend`.
+3. Add env var `VITE_API_BASE_URL` = your Render backend URL (e.g. `https://<backend>.onrender.com`).
+4. Deploy.
+
+If refreshing a non-root route 404s, this repo includes `frontend/vercel.json` with a SPA rewrite.
+
 ## Run locally
 
 ### Docker (recommended for a clean demo)
