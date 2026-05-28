@@ -51,8 +51,7 @@ Vercel is a good fit for the React frontend. For the Django + Postgres backend, 
   - Runtime: Docker
   - Root directory / context: `backend`
   - Dockerfile: `backend/Dockerfile`
-  - Docker Command:
-    `sh -c "set -e; python manage.py migrate --noinput; python manage.py seed_demo; python manage.py collectstatic --noinput; gunicorn config.wsgi:application --bind 0.0.0.0:${PORT:-8000} --workers 2"`
+  - Start command: leave default (the Dockerfile CMD runs migrate + seed + collectstatic + gunicorn)
 3. Set backend env vars:
   - `DATABASE_URL` = Render Postgres connection string
   - `DJANGO_DEBUG` = `false`
