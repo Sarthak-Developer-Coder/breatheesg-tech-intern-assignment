@@ -8,3 +8,6 @@ gunicorn>=22,<23
 
 # PostgreSQL driver (recommended for deployment)
 psycopg[binary]>=3.2,<4
+
+# Date parsing for messy source formats
+python-dateutil>=2.9,<3
