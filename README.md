@@ -18,56 +18,14 @@ Required docs (these carry the “why”):
 - `TRADEOFFS.md`
 - `SOURCES.md`
 
-## Live deployment (required)
-
-This assignment requires a live deployment (local-only is not accepted).
+## Live deployment 
 
 - Render Blueprint: `render.yaml`
 - Deployed URLs:
   - Frontend: https://breatheesg-tech-intern-frontend.onrender.com
   - Backend API: https://breatheesg-tech-intern-backend.onrender.com
 
-Note: Render free instances can spin down when idle; the first request after inactivity may take ~30–60s.
 
-### Render steps (fast path)
-
-1. Push this repo to GitHub.
-2. In Render Dashboard: **New → Blueprint** and select this repo.
-3. When prompted for env vars:
-   - Frontend (`VITE_API_BASE_URL`): set to your backend service URL (e.g. `https://<backend>.onrender.com`)
-   - Backend (`CORS_ALLOWED_ORIGINS`): set to your frontend URL (e.g. `https://<frontend>.onrender.com`)
-4. Backend service starts by running migrations + seeding demo data.
-
-Notes:
-- The UI also lets you override API base URL / tenant / actor from the header (stored in localStorage).
-- Backend automatically adds `RENDER_EXTERNAL_HOSTNAME` to Django `ALLOWED_HOSTS`.
-
-### Vercel + Render (common split)
-
-Vercel is a good fit for the React frontend. For the Django + Postgres backend, use Render.
-
-1) Deploy backend on Render
-
-1. Create a Postgres database in Render.
-2. Create a Render Web Service from this repo:
-  - Runtime: Docker
-  - Root directory / context: `backend`
-  - Dockerfile: `backend/Dockerfile`
-  - Start command: leave default (the Dockerfile CMD runs migrate + seed + collectstatic + gunicorn)
-3. Set backend env vars:
-  - `DATABASE_URL` = Render Postgres connection string
-  - `DJANGO_DEBUG` = `false`
-  - `DJANGO_SECRET_KEY` = random
-  - `CORS_ALLOWED_ORIGINS` = your Vercel frontend URL (comma-separated if multiple)
-
-2) Deploy frontend on Vercel
-
-1. In Vercel: **Add New → Project → Import** this GitHub repo.
-2. Set **Root Directory** to `frontend`.
-3. Add env var `VITE_API_BASE_URL` = your Render backend URL (e.g. `https://<backend>.onrender.com`).
-4. Deploy.
-
-If refreshing a non-root route 404s, this repo includes `frontend/vercel.json` with a SPA rewrite.
 
 ## Run locally
 
