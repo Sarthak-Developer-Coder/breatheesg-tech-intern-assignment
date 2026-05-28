@@ -1,0 +1,54 @@
+{
+  "actor": "analyst@demo.local",
+  "source_label": "Travel platform API sample",
+  "transactions": [
+    {
+      "id": "FL-1001",
+      "type": "flight",
+      "date": "2026-02-20",
+      "origin_airport": "FRA",
+      "destination_airport": "LHR",
+      "travel_class": "economy",
+      "distance_km": null
+    },
+    {
+      "id": "FL-1002",
+      "type": "flight",
+      "date": "2026-02-22",
+      "origin_airport": "FRA",
+      "destination_airport": "JFK",
+      "travel_class": "business",
+      "distance_km": 6200
+    },
+    {
+      "id": "FL-FAIL-1",
+      "type": "flight",
+      "date": "2026-02-23",
+      "origin_airport": "XXX",
+      "destination_airport": "LHR",
+      "travel_class": "economy",
+      "distance_km": null
+    },
+    {
+      "id": "HT-2001",
+      "type": "hotel",
+      "check_in": "2026-02-20",
+      "city": "London",
+      "country": "GB",
+      "hotel_nights": 3,
+      "rooms": 1
+    },
+    {
+      "id": "GR-3001",
+      "type": "taxi",
+      "date": "2026-02-21",
+      "ground_distance_km": 12.5
+    },
+    {
+      "id": "GR-3002",
+      "type": "rail",
+      "date": "2026-02-21",
+      "ground_distance_km": 100
+    }
+  ]
+}

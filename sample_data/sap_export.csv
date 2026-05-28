@@ -1,0 +1,8 @@
+Werk;Brennstofftyp;Menge;Einheit;Datum;Materialgruppe;Materialkurztext
+1000;Diesel;1.234,5;L;31.12.2025;Kraftstoffe;Diesel fuer Fuhrpark
+2000;Benzin;500;liter;2025/11/05;Kraftstoffe;Benzin fuer Fuhrpark
+9999;Diesel;12;LTR;05-11-25;Kraftstoffe;Diesel (unknown plant code)
+1000;;250,0;kg;15.01.2026;Papier;Recycling Paper A4
+2000;;-10;kg;15.01.2026;Stahl;Steel rods (negative quantity)
+1000;Diesel;1;gal;2026-01-01;Kraftstoffe;Unsupported unit example (should fail)
+1000;Diesel;2;m3;01.02.2026;Kraftstoffe;Diesel volume in cubic meters

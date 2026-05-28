@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local dev artifacts
+*.sqlite3
+staticfiles/
+media/
+
+# Virtualenv / env files
+.venv/
+.env

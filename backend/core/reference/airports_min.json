@@ -1,0 +1,26 @@
+[
+  {"iata": "FRA", "name": "Frankfurt Airport", "city": "Frankfurt", "country": "DE", "lat": 50.0379, "lon": 8.5622},
+  {"iata": "MUC", "name": "Munich Airport", "city": "Munich", "country": "DE", "lat": 48.3538, "lon": 11.7861},
+  {"iata": "BER", "name": "Berlin Brandenburg Airport", "city": "Berlin", "country": "DE", "lat": 52.3667, "lon": 13.5033},
+  {"iata": "HAM", "name": "Hamburg Airport", "city": "Hamburg", "country": "DE", "lat": 53.6332, "lon": 9.9993},
+  {"iata": "DUS", "name": "Duesseldorf Airport", "city": "Duesseldorf", "country": "DE", "lat": 51.2895, "lon": 6.7668},
+
+  {"iata": "LHR", "name": "Heathrow Airport", "city": "London", "country": "GB", "lat": 51.47, "lon": -0.4543},
+  {"iata": "CDG", "name": "Charles de Gaulle Airport", "city": "Paris", "country": "FR", "lat": 49.0097, "lon": 2.5479},
+  {"iata": "AMS", "name": "Amsterdam Airport Schiphol", "city": "Amsterdam", "country": "NL", "lat": 52.3105, "lon": 4.7683},
+  {"iata": "ZRH", "name": "Zurich Airport", "city": "Zurich", "country": "CH", "lat": 47.4581, "lon": 8.5555},
+
+  {"iata": "JFK", "name": "John F. Kennedy International Airport", "city": "New York", "country": "US", "lat": 40.6413, "lon": -73.7781},
+  {"iata": "EWR", "name": "Newark Liberty International Airport", "city": "Newark", "country": "US", "lat": 40.6895, "lon": -74.1745},
+  {"iata": "ORD", "name": "O'Hare International Airport", "city": "Chicago", "country": "US", "lat": 41.9742, "lon": -87.9073},
+  {"iata": "SFO", "name": "San Francisco International Airport", "city": "San Francisco", "country": "US", "lat": 37.6213, "lon": -122.379},
+  {"iata": "LAX", "name": "Los Angeles International Airport", "city": "Los Angeles", "country": "US", "lat": 33.9416, "lon": -118.4085},
+
+  {"iata": "DXB", "name": "Dubai International Airport", "city": "Dubai", "country": "AE", "lat": 25.2532, "lon": 55.3657},
+  {"iata": "SIN", "name": "Singapore Changi Airport", "city": "Singapore", "country": "SG", "lat": 1.3644, "lon": 103.9915},
+  {"iata": "HND", "name": "Haneda Airport", "city": "Tokyo", "country": "JP", "lat": 35.5494, "lon": 139.7798},
+
+  {"iata": "DEL", "name": "Indira Gandhi International Airport", "city": "Delhi", "country": "IN", "lat": 28.5562, "lon": 77.1},
+  {"iata": "BOM", "name": "Chhatrapati Shivaji Maharaj International Airport", "city": "Mumbai", "country": "IN", "lat": 19.0896, "lon": 72.8656},
+  {"iata": "SYD", "name": "Sydney Airport", "city": "Sydney", "country": "AU", "lat": -33.9399, "lon": 151.1753}
+]
