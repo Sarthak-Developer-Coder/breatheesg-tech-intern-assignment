@@ -23,9 +23,11 @@ Required docs (these carry the “why”):
 This assignment requires a live deployment (local-only is not accepted).
 
 - Render Blueprint: `render.yaml`
-- After deploying, update this section with your URLs:
-  - Frontend: <ADD_FRONTEND_URL>
-  - Backend API: <ADD_BACKEND_URL>
+- Deployed URLs:
+  - Frontend: https://breatheesg-tech-intern-frontend.onrender.com
+  - Backend API: https://breatheesg-tech-intern-backend.onrender.com
+
+Note: Render free instances can spin down when idle; the first request after inactivity may take ~30–60s.
 
 ### Render steps (fast path)
 
